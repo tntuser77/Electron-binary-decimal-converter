@@ -1,0 +1,30 @@
+{
+  "name": "electron-binary-decimal-converter",
+  "version": "1.0.0",
+  "description": "Converts binary numbers to decimal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tntuser77/Electron-binary-decimal-converter.git"
+  },
+  "keywords": [
+    "electron",
+    "binary",
+    "decimal",
+    "first",
+    "project"
+  ],
+  "author": "Elijah Shope",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tntuser77/Electron-binary-decimal-converter/issues"
+  },
+  "homepage": "https://github.com/tntuser77/Electron-binary-decimal-converter#readme",
+  "devDependencies": {
+    "electron": "^23.1.4"
+  }
+}
