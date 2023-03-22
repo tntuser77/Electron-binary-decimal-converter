@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>Binary to Decimal Converter</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+  
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+      body {
+        background: #2196F3;
+      }
+
+      .container {
+        width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #fafafa;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      }
+
+      .input-field {
+        margin-bottom: 20px;
+      }
+
+      input[type=number] {
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        font-size: 20px;
+        outline: none;
+        background-color: #F5F5F5;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        width: 100%;
+      }
+
+      input[type=number]:focus {
+        background-color: #F5F5F5;
+      }
+
+      .button {
+        background-color: #2196F3;
+        color: #fafafa;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #2DB7F5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Binary to Decimal Converter</h1>
+      <div class="input-field">
+        <label for="binary">Enter a binary number</label>
+        <input type="number" name="binary" id="binary" />
+      </div>
+      <div class="input-field">
+        <label for="decimal">Decimal equivalent</label>
+        <input type="number" name="decimal" id="decimal" disabled />
+      </div>
+      <div class="input-field">
+        <button type="button" class="button" onclick="convert()">Convert</button>
+      </div>
+    </div>
+
+    <script>
+      function convert() {
+        let binaryStr = document.getElementById("binary").value;
+        let binaryRegex = /^[0-1]+$/;
+        if (binaryRegex.test(binaryStr)) {
+          let decimal = parseInt(binaryStr, 2);
+          document.getElementById("decimal").value = decimal;
+        } else {
+          alert('Please enter a valid binary number');
+        }
+      }
+    </script>
+  </body>
+  </html> 
